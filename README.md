@@ -1,2 +1,3 @@
-# twitters-extension
-Official Extension of Twitters.io
+# Twitters.io Chrome Extension
+
+MIT License 

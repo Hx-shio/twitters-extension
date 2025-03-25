@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Twitters.io",
+  "version": "1.0",
+  "description": "A modern interface for Twitters.io with API key management",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "assets/img/logo.png"
+  },
+  "permissions": [
+    "storage",
+    "cookies",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://twitters.io/*",
+    "https://*.x.com/*"
+  ],
+  "icons": {
+    "128": "assets/img/logo.png"
+  }
+} 
