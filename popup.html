@@ -19,6 +19,64 @@
     
     <div class="status-message" id="statusMessage"></div>
     
+    <div id="user-section" class="user-section hidden">
+      <div class="user-info">
+        <div class="info-row">
+          <span class="info-label">Username</span>
+          <span id="username" class="info-value"></span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Balance</span>
+          <span id="balance" class="info-value"></span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Status</span>
+          <span id="vendor-status" class="info-value"></span>
+        </div>
+      </div>
+
+      <div class="current-token-section">
+        <label for="currentToken">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/>
+          </svg>
+          Current Auth Token
+        </label>
+        <div class="input-group">
+          <input type="password" id="currentToken" readonly>
+          <button id="toggleTokenVisibility" class="icon-button" aria-label="Toggle token visibility">
+            <svg class="token-eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </button>
+          <button id="copyToken" class="icon-button" aria-label="Copy token">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <button id="importAccountsButton" class="primary-button">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M19 8v6m3-3h-6"/>
+        </svg>
+        Import Account
+      </button>
+      <button id="logoutButton" class="secondary-button">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+          <polyline points="16 17 21 12 16 7"/>
+          <line x1="21" y1="12" x2="9" y2="12"/>
+        </svg>
+        Logout
+      </button>
+    </div>
+
     <div id="auth-section" class="auth-section">
       <div class="api-key-section">
         <label for="apiKey">
@@ -45,39 +103,6 @@
           Save API Key
         </button>
       </div>
-    </div>
-
-    <div id="user-section" class="user-section hidden">
-      <div class="user-info">
-        <div class="info-row">
-          <span class="info-label">Username</span>
-          <span id="username" class="info-value"></span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">Balance</span>
-          <span id="balance" class="info-value"></span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">Status</span>
-          <span id="vendor-status" class="info-value"></span>
-        </div>
-      </div>
-      <button id="importAccountsButton" class="primary-button">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-          <circle cx="9" cy="7" r="4"/>
-          <path d="M19 8v6m3-3h-6"/>
-        </svg>
-        Import Account
-      </button>
-      <button id="logoutButton" class="secondary-button">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
-          <polyline points="16 17 21 12 16 7"/>
-          <line x1="21" y1="12" x2="9" y2="12"/>
-        </svg>
-        Logout
-      </button>
     </div>
   </div>
   <script src="assets/js/popup.js"></script>
